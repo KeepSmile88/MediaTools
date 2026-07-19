@@ -60,7 +60,6 @@ def build():
         '--windows-console-mode=disable',
         '--windows-icon-from-ico=assets/app_icon.ico',
         '--enable-plugin=pyside6',
-        '--include-data-dir=tools=tools',
         '--include-data-dir=assets=assets',
         '--output-dir=dist',
         'main.py'
@@ -81,6 +80,7 @@ def build():
         if target_dir.exists():
             shutil.rmtree(target_dir)
         dist_dir.rename(target_dir)
+            
         print("\n✅ 编译成功！独立运行目录已生成于: dist/MediaTools")
     else:
         print("❌ 未能找到 Nuitka 的输出目录 (main.dist)")

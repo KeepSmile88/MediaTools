@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Main App with Nuitka
         run: |
-          python -m nuitka --assume-yes-for-downloads --standalone --windows-console-mode=disable --windows-icon-from-ico=assets/app_icon.ico --enable-plugin=pyside6 --include-data-dir=tools=tools --include-data-dir=assets=assets --output-dir=dist main.py
+          python -m nuitka --assume-yes-for-downloads --standalone --windows-console-mode=disable --windows-icon-from-ico=assets/app_icon.ico --enable-plugin=pyside6 --include-data-dir=assets=assets --output-dir=dist main.py
 
       - name: Prepare Inno Setup Directory
         run: |

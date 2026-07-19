@@ -24,9 +24,13 @@ UninstallDisplayIcon={app}\main.exe
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-; 这里的相对路径是相对于运行 iscc 所在的目录（我们在根目录执行，所以填 dist/MediaTools/*）
+; 打包 Nuitka 编译产生的主程序及其运行环境
 Source: "dist\MediaTools\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; 包含根目录下的说明文件
+
+; 直接从项目根目录打包独立的 tools 第三方环境，避免被编译器干扰
+Source: "tools\*"; DestDir: "{app}\tools"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; 包含说明文件
 Source: "USER_MANUAL.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
