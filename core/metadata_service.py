@@ -47,7 +47,14 @@ _STRUCTURAL_EXIF_FIELDS = {
     "ColorPrimaries", "ColorProfiles", "Free", "MatrixCoefficients",
     "MaxBitrate", "MediaData", "SampleGroupDescription", "SampleSizes",
     "SampleToChunk", "SampleToGroup", "SyncSampleTable", "TimeToSampleTable",
-    "TransferCharacteristics", "Unknown_edts", "Unknown_esds", "VideoFullRangeFlag"
+    "TransferCharacteristics", "Unknown_edts", "Unknown_esds", "VideoFullRangeFlag",
+    "CompositionTimeToSample", "HandlerClass", "LayoutFlags", "VendorID", "Wide",
+    "CompressorName", "TrackWidth", "TrackHeight", "Rotation",
+    "GenMediaVersion", "GenFlags", "GenGraphicsMode", "GenOpColor", "GenBalance",
+    "VideoColorInfo", "VideoFieldOrder", "PixelAspectRatio", "CleanAperture",
+    "CleanApertureDimensions", "ProductionApertureDimensions", "EncodedPixelsDimensions",
+    "MovieDataSize", "MovieDataOffset", "AudioChannelLayout", "AudioChannelLayoutTag",
+    "VideoAlphaLevel"
 }
 
 
