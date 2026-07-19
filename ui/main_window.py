@@ -1,6 +1,6 @@
 from pathlib import Path
 from PySide6.QtCore import QSettings
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import (
     QMainWindow, QTabWidget, QMessageBox, QDialog, 
     QVBoxLayout, QTextEdit, QPushButton
@@ -21,6 +21,11 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("多媒体工具箱")
         self.resize(950, 700)
+
+        # 设置应用图标
+        icon_path = Path(__file__).parent.parent / "assets" / "app_icon.png"
+        if icon_path.exists():
+            self.setWindowIcon(QIcon(str(icon_path)))
 
         self.settings = QSettings("MyCompany", "MediaToolbox")
         self.tabs = QTabWidget()
